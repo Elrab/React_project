@@ -2,6 +2,7 @@ import React from "react";
 
 const Pagination = ({ photosPerPage, totalPhotos, paginate, currentPage }) => {
   const pageNumbers = [];
+  //TOTAL PAGES NEEDED
   for (let i = 1; i <= Math.ceil(totalPhotos / photosPerPage); i++) {
     pageNumbers.push(i);
   }
@@ -14,7 +15,7 @@ const Pagination = ({ photosPerPage, totalPhotos, paginate, currentPage }) => {
             <a
               onClick={() => paginate(number)}
               className={
-                currentPage === idx + 1 ? "page-link color-red" : "page-link"
+                currentPage === idx + 1 ? "page-link color-red" : "page-link" // SET CURRENT PAGE IN RED TEXT
               }
             >
               {number}
